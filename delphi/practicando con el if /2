@@ -1,1 +1,38 @@
+{
+   Confeccionar un programa que permita cargar un número entero positivo de
+   hasta tres cifras y muestre un mensaje indicando si tiene 1, 2, o 3 cifras.
+   Mostrar un mensaje de error si el número de cifras es mayor.
+}
 
+program maxi;
+
+  var
+           numero : integer;
+  begin
+        writeln('Ingrese un numero');
+        readln(numero);
+        // Aca empezamos a comparar
+        // Vemos si es positivo primero
+        if (numero >= 0) and (numero <= 999) then
+        begin
+           if numero <10 then
+           begin
+               writeln('El numero tiene 1 cifra')
+           end
+           else if (numero >= 10) and (numero <100) then
+           begin
+               writeln('El numero tiene 2 cifras')
+           end
+           else if (numero >= 100) and (numero < 1000) then
+           begin
+               writeln('El numero tiene 3 cifras')
+           end
+        end
+        else
+        begin
+            writeln('Sos boludo pibe')
+        end;
+
+
+        readln; // Esto es para que no se cierre la consola
+  end.
