@@ -1,0 +1,22 @@
+{
+ Mostrar todos los múltiplos de 8 que hay hasta el valor 500.
+Debe aparecer en pantalla 8 - 16 - 24, etc.
+}
+
+program maxi;
+
+  var
+   contador,x   : integer;
+begin
+  x:= 0;
+  contador:= 1;
+    while x<=500 do
+     begin
+       x:= 8*contador ;
+       writeln(x, ' - ' );
+       contador:= contador + 1; // Este es para que multiplique el 8 por 1, despues 2, 3, y asi
+     end;
+
+  readln;
+
+end.
