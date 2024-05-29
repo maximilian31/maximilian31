@@ -1,0 +1,42 @@
+{
+En una empresa trabajan n empleados cuyos sueldos oscilan entre $100 y $500,
+realizar un programa que lea los sueldos que cobra cada empleado e informe
+cuántos empleados cobran entre $100 y $300 y cuántos cobran más de $300.
+Además el programa deberá informar el importe que gasta la empresa en
+sueldos al personal.
+}
+
+program maxi;
+
+  var
+      empleados,entre,mas300,x   : integer;
+      sueldos,totalSueldos : double;
+begin
+   writeln('Ingresar la cantidad de empleados ');
+   readln(empleados);
+   // Aca inicializo los contadores
+   totalSueldos:= 0;
+   mas300:= 0;
+   entre:= 0;
+   x:= 1; // De contador
+    while (x<=empleados) do
+      begin
+       writeln('Ingresar el sueldo del empleado ', x) ;
+       readln(sueldos);
+        if (sueldos>= 100) and (sueldos<=300) then
+          begin
+            entre:= entre + 1;
+          end;
+        if sueldos > 300 then
+          begin
+            mas300:= mas300 + 1;
+          end;
+       totalSueldos:= totalSueldos + sueldos; // Aca voy sumando los sueldos
+       x:= x + 1;
+      end;
+    writeln('La cantidad de empleados que cobran entre 100 y 300 son: ', entre);
+    writeln('La cantidad de empleados que cobran mas de 300 son: ', mas300);
+    writeln('El total de plata que se gasta en sueldos es de: ',totalSueldos:0:2) ;
+    readln;
+
+end.
