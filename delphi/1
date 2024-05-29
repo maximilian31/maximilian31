@@ -1,0 +1,35 @@
+{ Realizar un programa que solicite la carga por teclado de dos números enteros,
+si el primero es mayor al segundo informar su suma y diferencia, en caso contrario
+informar el producto y la división del primero respecto al segundo. }
+
+
+
+program maxi;
+
+{$APPTYPE CONSOLE}
+
+  var
+  num1,num2,suma,resta,producto,division : integer;
+  begin
+        writeln('Ingresar el primer numero:');
+        readln(num1);
+        writeln('Ingresar el segundo numero:');
+        readln(num2);
+        suma := num1 + num2;
+        resta := num1 - num2;
+        producto := num1 * num2;
+        division := num2 div num1;
+        if num1 > num2 then
+          begin
+             writeln('La suma de los numeros es de: ', suma);
+             writeln('La resta de los numeros es de: ', resta);
+          end
+        else
+          begin
+             writeln('El prducto de los numeros es de: ', producto);
+             writeln('La division de los numeros es de: ', division);
+          end;
+        readln;
+
+
+  end.
