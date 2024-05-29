@@ -1,0 +1,26 @@
+{
+ Se ingresan un conjunto de n alturas de personas por teclado.
+ Mostrar la altura promedio de las personas.
+}
+
+program maxi;
+
+  var
+     altura,suma,promedio : double;
+     personas,x : integer;
+begin
+   writeln('Escribir la cantidad de personas que se ingresan');
+   readln(personas);
+   suma := 0;
+   x:= 1; // Este es para que funcione como "contador" en el while
+    while x <= personas do
+      begin
+        writeln('Escribir la altura de la persona: ', x);
+        readln(altura);
+        suma:= suma + altura;
+        x:= x + 1;
+      end;
+    promedio:= suma / personas;
+    writeln('El promedio de altura es: ', promedio:0:1);
+    readln;
+end.
