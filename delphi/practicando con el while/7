@@ -1,0 +1,40 @@
+{
+Desarrollar un programa que permita cargar n números enteros y luego nos
+informe cuántos valores fueron pares y cuántos impares.
+Emplear el operador "mod" en la condición de la estructura condicional
+(este operador retorna el resto de la división de dos valores, por ejemplo 11
+mod 2 retorna un 1):
+
+if valor mod 2 = 0 then        //Si el if da verdadero luego es par.
+}
+
+program maxi;
+  var
+    pares,impares,numeros,cuantos,x : integer;
+
+begin
+  //inicializo los contadores
+  pares:= 0;
+  impares:= 0;
+  x:= 1;
+
+  writeln('Ingrese la cantidad de numeros que quiera'); //Aca cuantos numeros voy a ingresar
+  readln(cuantos);
+  writeln('Ingresar ', cuantos, ' numeros');   // Aca ingreso los numeros
+    while x<=cuantos do        // Hasta que "x" sea igual a "cuantos"
+      begin
+        readln(numeros);
+          if numeros mod 2 = 0 then
+            begin
+              pares:= pares + 1;
+            end
+            else
+            begin
+              impares:= impares + 1;
+            end;
+        x:= x + 1;
+      end;
+  writeln('Los numeros pares ingresados fueron: ', pares);
+  writeln('Los numeros impares ingresados fueron: ', impares);
+  readln; // Este es para que no se cierre la ventana
+end.
