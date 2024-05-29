@@ -1,0 +1,44 @@
+{
+Realizar un programa que permita cargar dos listas de 15 valores cada una.
+Informar con un mensaje cual de las dos listas tiene un valor acumulado mayor
+(mensajes "Lista 1 mayor", "Lista 2 mayor", "Listas iguales")
+Tener en cuenta que puede haber dos o más estructuras repetitivas en un algoritmo.
+}
+
+program maxi;
+
+  var
+     lista1,lista2,num1,num2,x,y : integer;
+
+begin
+   x := 1; //
+   // inicializo las listas
+   lista1 := 0;
+   lista2 := 0;
+   writeln('Cargue la primer lista de 15') ;
+    while x <= 15 do
+      begin
+      readln(num1);
+      lista1:= lista1 + num1;
+      x:= x + 1; // Este funciona como contador
+      end;
+
+   y:= 1;
+   writeln('Cargue la primer lista de 15') ; // La segunda lista
+    while y <= 15 do
+      begin
+      readln(num2);
+      lista2:= lista2 + num2;
+      y:= y + 1;
+      end;
+   if lista1 > lista2 then
+    begin
+      writeln('La lista con mayor valor acumulado es la lista 1');
+    end
+    else
+    begin
+      writeln('La lista con mayor valor acumulado es la lista 2');
+    end;
+
+   readln;
+end.
