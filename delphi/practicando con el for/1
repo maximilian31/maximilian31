@@ -1,0 +1,17 @@
+{
+ Desarrollar un programa que muestre la tabla de multiplicar del 5 (del 5 al 50)
+}
+
+program maxi;
+
+  var
+     multi,i : integer;
+begin
+multi:= 0;
+  for i := 1 to 10 do    // Esto es q va a multiplicar hasta el 10
+   begin
+     multi:= 5 * i;
+     writeln(multi);
+   end;
+  readln;
+end.
