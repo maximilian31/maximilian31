@@ -1,0 +1,64 @@
+{
+Se cuenta con la siguiente información:
+Las edades de 5 estudiantes del turno mañana.
+Las edades de 6 estudiantes del turno tarde.
+Las edades de 11 estudiantes del turno noche.
+Las edades de cada estudiante deben ingresarse por teclado.
+a) Obtener el promedio de las edades de cada turno (tres promedios)
+b) Imprimir dichos promedios (promedio de cada turno)
+c) Mostrar por pantalla un mensaje que indique cual de los tres turnos tiene
+un promedio de edades mayor.
+}
+
+program maxi;
+
+  var
+  mañanaCont,tardeCont,nocheCont,mañana,tarde,noche,m,t,n : integer;
+  promediomañ,promediotar,promedionoc : integer;
+begin
+  mañanaCont:= 0;
+  tardeCont:= 0;
+  nocheCont:= 0;
+  // promedio para los de la mañana
+  writeln('Ingresar la edad de los chicos del turno mañana');
+  for m := 1 to 5 do
+    begin
+     readln(mañana);
+     mañanaCont:= (mañanaCont + mañana);
+    end;
+  writeln('Ingresar la edad de los chicos del turno tarde');
+  for m := 1 to 6 do
+    begin
+     readln(tarde);
+     tardeCont:= (tardeCont + tarde);
+    end;
+  writeln('Ingresar la edad de los chicos del turno noche');
+  for m := 1 to 11 do
+    begin
+     readln(noche);
+     nocheCont:= (nocheCont + noche);
+    end;
+  //
+  promediomañ:= mañanaCont div 5;
+  promediotar:= tardeCont div 6;
+  promedionoc:= nocheCont div 11;
+  writeln('El promedio de edad del turno mañana es: ', promediomañ );
+  writeln('El promedio de edad del turno tarde es: ', promediotar );
+  writeln('El promedio de edad del turno noche es: ', promedionoc );
+    if (promediomañ > promediotar) and (promediomañ > promedionoc) then
+      begin
+        writeln('El turno mañana tiene un promedio de edad mayor');
+      end
+        else if (promediotar > promediomañ) and (promediotar > promedionoc) then
+        begin
+          writeln('El turno tarde tiene un promedio de edad mayor');
+        end
+          else
+          begin
+            writeln('El turno noche tiene un promedio de edad mayor');
+          end;
+
+
+  //final
+  readln;
+end.
