@@ -1,0 +1,67 @@
+{
+Realizar un programa que lea los lados de n triángulos, e informar:
+a) De cada uno de ellos, qué tipo de triángulo es: equilátero (tres lados iguales)
+, isósceles (dos lados iguales), o escaleno (ningún lado igual)
+b) Cantidad de triángulos de cada tipo.
+c) Tipo de triángulo que posee menor cantidad.
+}
+
+program maxi;
+
+  var
+    triangulos,menor,equi,iso,escal,i  :integer;
+    lado1,lado2,lado3   :double;
+begin
+ triangulos:= 0;
+ menor:= 0;
+ // los tipos de triangulo
+ equi:= 0;
+ iso:= 0;
+ escal:= 0;
+ //
+ writeln('Ingrese cuantos triangulos va a usar');
+ readln(triangulos);
+ for i := 1 to triangulos do
+    begin
+      writeln('Ingresar el primer lado del triangulo');
+      readln(lado1);
+      writeln('Ingresar el segundo lado del triangulo');
+      readln(lado2);
+      writeln('Ingresar el tercer lado del triangulo');
+      readln(lado3);
+       if (lado1 = lado2) and (lado2 = lado3) then  // Si son distintos
+        begin
+          writeln('Es equilatero');
+          equi:= equi + 1;
+        end
+        else if (lado1 = lado2) or (lado2 = lado3) or (lado1 = lado3) then
+         begin
+          writeln('Es isoceles');
+          iso:= iso + 1;
+         end
+         else
+          begin
+            writeln('Es escaleno');
+            escal:= escal + 1;
+          end;
+    end;
+   //Aca va a decir cuantos hay de cada uno
+   writeln('Hay ', equi, ' equilateros');
+   writeln('Hay ', iso, ' isoceles');
+   writeln('Hay ', escal, ' escalenos');
+   //Aca va a decir quien tiene menor cantidad
+   if (equi < iso) and (equi < escal) then
+    begin
+      writeln('El equilatero posee menor cantidad');
+    end
+      else if (iso < equi) and (iso < escal) then
+      begin
+       writeln('El isoceles posee menor cantidad');
+      end
+        else
+        begin
+          writeln('El escaleno posee menor cantidad');
+        end;
+
+  readln;
+end.
